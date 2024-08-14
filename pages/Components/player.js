@@ -52,6 +52,8 @@ import { MdDelete } from "react-icons/md";
 
 import styles from '/styles/Player.module.css';
 import { Dela_Gothic_One} from "next/font/google";
+import AddButton from './addButton';
+import Search from './search';
 
 const Dela = Dela_Gothic_One({
     weight: '400',
@@ -64,9 +66,11 @@ export default function Player() {
             <div className={styles.topDiv}>
                 <div className={Dela.className}>
                     <h1 id='FluctusLogo'>Fluctus</h1>
-                </div>  
+                </div>
             </div>
-        <div className={styles.bottomDiv}></div>
+            <AddButton/>
+            <Search />
+            <div className={styles.bottomDiv}></div>
         </div>
     );
 }

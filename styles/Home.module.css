@@ -1,0 +1,113 @@
+/* styles/Home.module.css */
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: #FDFFFC;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #201E1F;
+    padding: 10px 20px;
+  }
+  
+  .logo {
+    font-size: 2rem;
+    color: #FDFFFC;
+    font-family: 'Dela Gothic One', sans-serif;
+  }
+  
+  .icons {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .icon {
+    color: #FDFFFC;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  .addIcon {
+    background-color: #A2DD21;
+    color: #201E1F;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+  }
+  
+  .main {
+    padding: 20px;
+    flex: 1;
+    overflow-y: auto;
+  }
+  
+  .welcome {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    font-family: 'Dela Gothic one', sans-serif;
+    color: #201E1F;
+  }
+  
+  .sectionTitle {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    font-family: 'Dela Gothic One', sans-serif;
+  }
+  
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 2fr);
+    gap: 15px;
+  }
+  
+  .card {
+    background-color: #FDFFFC;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    color: #201E1F;
+  }
+  
+  .playIcon {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #201E1F;
+  }
+  
+  .footer {
+    background-color: #201E1F;
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .playerControls {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .playButton {
+    font-size: 2rem;
+    color: #201E1F;
+    background-color: #A2DD21;
+    cursor: pointer;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+  }
+  
+  .progressBar {
+    width: 100%;
+    height: 4px;
+    background-color: #A2DD21;
+    border-radius: 2px;
+  }
+  
