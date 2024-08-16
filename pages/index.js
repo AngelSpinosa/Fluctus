@@ -1,13 +1,42 @@
 import styles from '../styles/Home.module.css';
+import { useState } from 'react';
 import { FiPlay, FiPlus, FiSearch, FiSettings, FiSkipBack, FiSkipForward, FiRepeat, FiShuffle } from 'react-icons/fi';
 import { MdAddCircle } from "react-icons/md";
+import Modal from './Components/Modal';
+import ContextMenu from './Components/contextMenu';
+
+
 export default function Home() {
+  const[menuVisible, setMenuVisible]=useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  
+  const toggleMenu = () => {
+    setMenuVisible(!menuVisible);
+  };
+
+  const openModal = () => {
+    setIsModalOpen(true);
+    setMenuVisible(false); // Cerrar el menú cuando se abre el modal
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
+
   return (
     <div className={styles.container}>
       <header className={styles.header}>
         <h1 className={styles.logo}>Fluctus</h1>
         <div className={styles.icons}>
-          <FiPlus className={styles.addIcon} />
+          <div className={styles.iconWrapper}>
+            <FiPlus className={styles.addIcon} onClick={toggleMenu} />
+            {menuVisible && (
+              <div className={styles.dropdownMenu}>
+                <button className={styles.dropdownItem} onClick={openModal}>Añadir canción</button>
+                <button className={styles.dropdownItem}>Crear playlist</button>
+              </div>
+            )}
+          </div>
           <FiSearch className={styles.icon} />
           <FiSettings className={styles.icon} />
         </div>
@@ -53,6 +82,7 @@ export default function Home() {
         </div>
         <div className={styles.progressBar}></div>
       </footer>
+      {isModalOpen && <Modal closeModal={closeModal} />}
     </div>
   );
 }

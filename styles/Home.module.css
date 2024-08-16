@@ -111,3 +111,42 @@
     border-radius: 2px;
   }
   
+  .iconWrapper {
+    position: relative;
+  }
+  
+  .dropdownMenu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #201E1F;
+    color: #FDFFFC;
+    border-radius: 8px;
+    box-shadow: 0px 8px 16px #201E1F;
+    z-index: 1000;
+  }
+  
+  .dropdownItem {
+    display: block;
+    padding: 10px 20px;
+    font-size: 1rem;
+    text-align: left;
+    background: none;
+    border: none;
+    color: #FDFFFC;
+    cursor: pointer;
+    width: 100%;
+    border-bottom: 1px solid #201E1F;
+  }
+  
+  .dropdownItem:last-child {
+    border-bottom: none;
+  }
+  
+  .dropdownItem:hover {
+    background-color: #201E1F;
+  }
+  
+  .addIcon {
+    cursor: pointer;
+  }
